@@ -12,3 +12,4 @@
 
 
 * Spacemacs
+vim 快捷键
