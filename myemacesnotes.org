@@ -1,15 +1,56 @@
 * Emacs
-** 常用快捷键
-| key | description  |
-|-----+--------------|
-| C-a | 光标到到行首 |
-| C-e | 光标到到行尾 |
-| C-n | 光标到下一行 |
-| C-p | 光标到下一行 |
-| C-v | 下翻页       |
-| M-v | 上翻页       |
-|     |              |
+** 安装
+*** 简单方式
+到 http://ftp.gnu.org/gnu/emacs/ 下载相关版本的 emacs, 对于 windows 版本只需解压压缩
+文件，在\bin 目录中就有可运行的.exe
+运行 emacs.exe 能在 Home 路径生成.emacs.d 文件夹
+运行 addpm.exe 能生成开始菜单
+*** git 安装
+参考链接：http://ergoemacs.org/emacs/building_emacs_from_git_repository.html
 
+** Emacs Basics
+.# 打头的文件是修改但尚未保存的文件
+** 常用快捷键
+| key     | description                    |
+|---------+--------------------------------|
+| C-a     | 光标到到行首                   |
+| C-e     | 光标到到行尾                   |
+| C-n     | 光标到下一行                   |
+| C-p     | 光标到下一行                   |
+| C-v     | 下翻页                         |
+| M-v     | 上翻页                         |
 
 * Spacemacs
-vim 快捷键
+** 安装
+1. 安装 emacs
+2. 参照 spacemacs 的 readme clone spacemacs 仓库 
+3. 安装时 spacemacs distr 和 spacemacs-base 的区别：前者包含了许多开箱即用的功能，后者包含的东西更少，更基础，高级用户可以使用。
+4. 安装后会在 home 目录生成一个.spacemacs 文件，自动生成了一些配置。
+5. 查看 elpa.emacs-china.org 网页配置源。
+** Keybinding
+| key                   | description                    |
+|-----------------------+--------------------------------|
+| spc b s               | switch to the *scratch* buffer |
+| spc k p               | paste after 可粘贴系统剪切板   |
+| spc k P               | paste before 可粘贴系统剪切板  |
+| Spc f j (emacs C x d) | 进入 Dired  Mode:              |
+| Spc f e R             | 不退出，重新刷新配置           |
+| Spc s j               | 函数跳转                       |
+
+* Tips for Org-mode
+**  org mode 默认会打开 truncate-lines 模式。
+# 永久解决方法： 在 org-mode-hook 中加入 (setq truncate-lines nil) 即可。
+# 临时解决方法：M-x 然后选择 toggle-truncate-lines
+  
+** *:w path of file* To save the scratch to a new file.
+* Dired Mode
+- + 创建目录 
+- g 刷新目录
+- C 拷贝
+- D 删除
+- R 重命名
+- d 标记删除
+- u 取消标记
+- x 执行所有的标记
+
+   
